@@ -2,14 +2,22 @@ document.addEventListener("DOMContentLoaded", function() {
     const darkModeBtn = document.getElementById("darkModeBtn");
     const content = document.getElementById("content");
 
-    // Initially set the dark mode
-    document.body.classList.add("dark-mode");
-    darkModeBtn.classList.add("dark-mode-btn");
+    // Initially set light mode
+    document.body.classList.add("light");
 
     darkModeBtn.addEventListener("click", function() {
-        document.body.classList.toggle("dark-mode");
-        darkModeBtn.classList.toggle("dark-mode-btn");
+        const body = document.body;
+        const isDarkMode = body.classList.contains("dark-mode");
+
+        // Toggle dark mode class
+        body.classList.toggle("dark-mode");
+
+        // Update button based on mode
+        darkModeBtn.classList.toggle("dark-mode-btn-active");
     });
+
+    // Dummy data and rendering logic (same as before)
+
 
     // Dummy data
     const blogPosts = [

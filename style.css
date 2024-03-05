@@ -5,8 +5,18 @@ body {
     padding: 0;
     background-color: #000; /* Set background to pure black */
     color: #ffffff; /* Set text color to white */
-    color: #ffffff;
-    transition: color 0.3s ease;
+    transition: background-color 0.5s ease, color 0.5s ease; 
+}
+/* Light mode styles */
+body.light {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #000;
+    color: #fff;
 }
 
 header {
@@ -17,7 +27,6 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
 h1 {
     margin: 0;
     text-decoration: none;
@@ -29,7 +38,7 @@ main {
 
 .article {
     margin-bottom: 40px;
-    background-color: #fff;
+    background-color: #fff; /* Light mode background color */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -56,15 +65,19 @@ main {
     background-color: #000; /* Change background to black in dark mode */
     color: #fff; /* Change text color to white in dark mode */
 }
-/* Dark mode */
+
 .dark-mode body {
     background-color: #000; /* Change background to black in dark mode */
     color: #fff; /* Change text color to white in dark mode */
 }
 
+.dark-mode .article {
+    background-color: #111; /* Dark mode background color */
+    color: #fff; /* Dark mode text color */
+}
 
 .dark-mode .article h2 {
-    color: #000; /* Set card title to black in dark mode */
+    color: #fff; /* Set card title to white in dark mode */
 }
 
 /* Dark mode button */
@@ -99,6 +112,11 @@ main {
 /* Invert the dark mode icon when dark mode is active */
 .dark-mode .darkModeButton.dark-mode-button-active img {
     filter: invert(1);
+}
+
+.dark-mode footer {
+    background-color: inherit; /* Inherit from body background color */
+    color: inherit;           /* Inherit from body text color */
 }
 
 /* Fullscreen modal styles */
@@ -143,4 +161,39 @@ main {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+/* Footer */
+footer {
+    color: #fff; /* Set text color for footer */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons {
+    margin-right: 20px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, fill 0.3s ease; /* Add transition for smooth color change */
+}
+
+.dark-mode .social-icons img {
+    filter: brightness(0) invert(1); /* Invert the colors for dark mode */
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
 }

@@ -18,53 +18,60 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Dummy data and rendering logic (same as before)
     // Dummy data
-const blogPosts = [
-    { 
-        title: "Chikmagalur, Karnataka", 
-        image: "chikmagalur.jpg", 
-        content: "Verdant Retreat: Traverse winding roads and lush tea estates in the enchanting hill station of Chikmagalur." 
-    },
-    { 
-        title: "Ajmer and Jaipur in Rajasthan", 
-        image: "ajmer-jaipur.jpg", 
-        content: "Rajasthani Royalty: Experience the rich heritage and vibrant culture of Ajmer and Jaipur in the royal state of Rajasthan." 
-    },
-    { 
-        title: "Agra, Uttar Pradesh", 
-        image: "agra.jpg", 
-        content: "Iconic Landmarks: Marvel at the breathtaking beauty of the Taj Mahal and explore the historic city of Agra in Uttar Pradesh." 
-    },
-    { 
-        title: "Chandrabhaga Beach and Konark-Puri Marine Drive, Odisha", 
-        image: "chandrabhaga-beach.jpg", 
-        content: "Coastal Charms: Indulge in the tranquility of Chandrabhaga Beach and the scenic allure of Konark-Puri Marine Drive." 
-    },
-    { 
-        title: "Skandagiri Hills, Chikkabalapur, Karnataka", 
-        image: "skandagiri-hills.jpg", 
-        content: "Trailblazing Adventure: Embark on an exhilarating hike through Karnataka's rugged trails." 
-    },
-    { 
-        title: "Mysore, Karnataka", 
-        image: "mysore-palace.jpg", 
-        content: "Royal Splendor: Immerse yourself in the grandeur of Mysore Palace during Durga Puja." 
-    },
-    { 
-        title: "Serenda Forest, Jharkhand", 
-        image: "serenda-forest.jpg", 
-        content: "Mystical Tranquility: Explore the mystical Serenda Forest, where ancient trees whisper tales of forgotten times." 
-    },
-    { 
-        title: "Hogenakkal Falls, Tamil Nadu", 
-        image: "hogenakkal-falls.jpg", 
-        content: "Refreshing Cascades: Dive into the embrace of Tamil Nadu's enchanting natural wonder." 
-    },
-    { 
-        title: "Bhitarkanika National Park and Pentha Sea Beach, Odisha", 
-        image: "bhitarkanika-national-park.jpg", 
-        content: "Wilderness Escape: Venture into the heart of nature's sanctuary at Bhitarkanika National Park before unwinding on the pristine shores of Pentha Sea Beach." 
-    },
-];
+    const blogPosts = [
+        { 
+            title: "Chikmagalur: Coffee Estates", 
+            image: "chikmagalur.jpg", 
+            content: "Embark on a scenic journey through the lush green tea estates of Chikmagalur, Karnataka. Experience the aroma of freshly brewed tea while traversing winding roads that lead to breathtaking viewpoints." 
+        },
+        { 
+            title: "Ajmer & Jaipur: Royal Splendor", 
+            image: "ajmer-jaipur.jpg", 
+            content: "Immerse yourself in the opulent heritage of Rajasthan as you explore the majestic forts and palaces of Ajmer and Jaipur. Witness the vibrant colors of traditional attire and indulge in the rich flavors of Rajasthani cuisine." 
+        },
+        { 
+            title: "Laal Quila: Iconic Heritage", 
+            image: "red-fort.jpg", 
+            content: "Step into history at Laal Quila (Red Fort), a UNESCO World Heritage Site in the heart of Old Delhi. Marvel at the grandeur of Mughal architecture and immerse yourself in the rich cultural tapestry of India's capital city." 
+        },
+        { 
+            title: "Hogenakkal Falls: Nature's Symphony", 
+            image: "hogenakkal-falls.jpg", 
+            content: "Surrender to the rhythmic melody of nature at Hogenakkal Falls in Tamil Nadu. Escape the chaos of urban life and immerse yourself in the refreshing embrace of cascading waterfalls and pristine surroundings. Let the cool mist rejuvenate your senses as you marvel at the breathtaking beauty of this natural wonder." 
+        },
+        { 
+            title: "Taj Mahal: Agra's Eternal Jewel", 
+            image: "agra.jpg", 
+            content: "Immerse yourself in the timeless splendor of the Taj Mahal, a symbol of eternal love, nestled in the historic city of Agra, Uttar Pradesh. Lose yourself in the intricate marble architecture and stroll through the lush gardens surrounding this iconic monument." 
+        },
+        { 
+            title: "Chandrabhaga Beach: Konark-Puri Drive", 
+            image: "chandrabhaga-beach.jpg", 
+            content: "Relax and rejuvenate on the golden sands of Chandrabhaga Beach before embarking on a picturesque drive along the Konark-Puri Marine Drive in Odisha. Feel the gentle breeze and listen to the soothing sound of crashing waves as you take in the scenic coastal views." 
+        },
+        { 
+            title: "Skandagiri Hills: Hiking Adventure", 
+            image: "skandagiri-hills.jpg", 
+            content: "Challenge yourself with an exhilarating hike through the rugged terrain of Skandagiri Hills in Chikkabalapur, Karnataka. Trek through dense forests and rocky slopes to reach the summit and be rewarded with panoramic views of the surrounding landscape." 
+        },
+        { 
+            title: "Mysore Palace: Regal Spectacle", 
+            image: "mysore-palace.jpg", 
+            content: "Step into the realm of royalty and witness the grandeur of Mysore Palace during the vibrant celebrations of Durga Puja in Karnataka. Be mesmerized by the opulent architecture, intricate artworks, and lavish decorations that adorn this majestic palace." 
+        },
+        { 
+            title: "Saranda Forest: Asia's Mystical Wilderness", 
+            image: "saranda-forest.jpg", 
+            content: "Embark on an extraordinary journey through the mystical expanse of Saranda Forest, Asia's largest forest reserve nestled in Jharkhand. Delve into the serene ambiance as ancient trees whisper tales of bygone eras, and unveil the hidden treasures of this captivating wilderness." 
+        },        
+        { 
+            title: "Bhitarkanika: Encounter Majestic Crocodiles on Safari", 
+            image: "bhitarkanika-national-park.jpg", 
+            content: "Embark on an exhilarating boat safari through the tranquil waterways of Bhitarkanika National Park in Odisha. Explore the mesmerizing beauty of mangrove forests, and witness the diverse ecosystem of this wildlife sanctuary come to life. Brace yourself for an unforgettable adventure where you'll encounter majestic crocodiles basking in the sun, adding an extra thrill to your journey into the heart of nature." 
+        },        
+    ];
+    
+    
 
 
 

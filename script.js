@@ -17,14 +17,22 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Dummy data and rendering logic (same as before)
-
-
     // Dummy data
 const blogPosts = [
     { 
         title: "Chikmagalur, Karnataka", 
         image: "chikmagalur.jpg", 
         content: "Verdant Retreat: Traverse winding roads and lush tea estates in the enchanting hill station of Chikmagalur." 
+    },
+    { 
+        title: "Ajmer and Jaipur in Rajasthan", 
+        image: "ajmer-jaipur.jpg", 
+        content: "Rajasthani Royalty: Experience the rich heritage and vibrant culture of Ajmer and Jaipur in the royal state of Rajasthan." 
+    },
+    { 
+        title: "Agra, Uttar Pradesh", 
+        image: "agra.jpg", 
+        content: "Iconic Landmarks: Marvel at the breathtaking beauty of the Taj Mahal and explore the historic city of Agra in Uttar Pradesh." 
     },
     { 
         title: "Chandrabhaga Beach and Konark-Puri Marine Drive, Odisha", 
@@ -45,7 +53,8 @@ const blogPosts = [
         title: "Serenda Forest, Jharkhand", 
         image: "serenda-forest.jpg", 
         content: "Mystical Tranquility: Explore the mystical Serenda Forest, where ancient trees whisper tales of forgotten times." 
-    },{ 
+    },
+    { 
         title: "Hogenakkal Falls, Tamil Nadu", 
         image: "hogenakkal-falls.jpg", 
         content: "Refreshing Cascades: Dive into the embrace of Tamil Nadu's enchanting natural wonder." 
@@ -54,8 +63,9 @@ const blogPosts = [
         title: "Bhitarkanika National Park and Pentha Sea Beach, Odisha", 
         image: "bhitarkanika-national-park.jpg", 
         content: "Wilderness Escape: Venture into the heart of nature's sanctuary at Bhitarkanika National Park before unwinding on the pristine shores of Pentha Sea Beach." 
-    }
+    },
 ];
+
 
 
     // Render blog posts

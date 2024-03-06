@@ -20,14 +20,43 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // Dummy data
-    const blogPosts = [
-        { title: "A Trip to Paris", image: "paris.jpg", content: "Paris, the city of love, is one of the most romantic destinations in the world. The Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral are must-visit attractions." },
-        { title: "Exploring Tokyo", image: "tokyo.jpg", content: "Tokyo, the capital of Japan, is a bustling metropolis known for its futuristic technology, traditional culture, and delicious cuisine. Don't miss visiting Shibuya Crossing and Tokyo Disneyland." },
-        { title: "Adventures in New York", image: "new-york.jpg", content: "New York City, the Big Apple, offers endless possibilities for adventure. From Broadway shows to Central Park picnics, there's something for everyone in this vibrant city." },
-        { title: "Safari in Africa", image: "safari.jpg", content: "Embark on a thrilling safari adventure in Africa and witness the incredible wildlife up close. From majestic lions to graceful giraffes, the African savanna is a sight to behold." },
-        { title: "Island Paradise in Maldives", image: "maldives.jpg", content: "Escape to the Maldives for a dreamy island getaway. With crystal-clear waters, white sandy beaches, and luxurious overwater bungalows, it's the perfect destination for relaxation and romance." },
-        { title: "Hiking in the Swiss Alps", image: "swiss-alps.jpg", content: "Experience the breathtaking beauty of the Swiss Alps on a hiking adventure. With stunning mountain vistas, charming alpine villages, and pristine lakes, Switzerland is a nature lover's paradise." }
-    ];
+const blogPosts = [
+    { 
+        title: "Chikmagalur, Karnataka", 
+        image: "chikmagalur.jpg", 
+        content: "Verdant Retreat: Traverse winding roads and lush tea estates in the enchanting hill station of Chikmagalur." 
+    },
+    { 
+        title: "Chandrabhaga Beach and Konark-Puri Marine Drive, Odisha", 
+        image: "chandrabhaga-beach.jpg", 
+        content: "Coastal Charms: Indulge in the tranquility of Chandrabhaga Beach and the scenic allure of Konark-Puri Marine Drive." 
+    },
+    { 
+        title: "Skandagiri Hills, Chikkabalapur, Karnataka", 
+        image: "skandagiri-hills.jpg", 
+        content: "Trailblazing Adventure: Embark on an exhilarating hike through Karnataka's rugged trails." 
+    },
+    { 
+        title: "Mysore, Karnataka", 
+        image: "mysore-palace.jpg", 
+        content: "Royal Splendor: Immerse yourself in the grandeur of Mysore Palace during Durga Puja." 
+    },
+    { 
+        title: "Serenda Forest, Jharkhand", 
+        image: "serenda-forest.jpg", 
+        content: "Mystical Tranquility: Explore the mystical Serenda Forest, where ancient trees whisper tales of forgotten times." 
+    },{ 
+        title: "Hogenakkal Falls, Tamil Nadu", 
+        image: "hogenakkal-falls.jpg", 
+        content: "Refreshing Cascades: Dive into the embrace of Tamil Nadu's enchanting natural wonder." 
+    },
+    { 
+        title: "Bhitarkanika National Park and Pentha Sea Beach, Odisha", 
+        image: "bhitarkanika-national-park.jpg", 
+        content: "Wilderness Escape: Venture into the heart of nature's sanctuary at Bhitarkanika National Park before unwinding on the pristine shores of Pentha Sea Beach." 
+    }
+];
+
 
     // Render blog posts
     blogPosts.forEach(post => {

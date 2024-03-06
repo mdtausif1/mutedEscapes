@@ -194,8 +194,6 @@ footer {
 
 /* Ensures h1 inherits color from header */
 header h1 {
-    position: relative;
-    font-size: 175%;
     border-bottom: 2px solid #000000;
     display: inline-block;
     padding-bottom: 5px;
@@ -205,8 +203,6 @@ header h1 {
 
 /* dark mode */
 .dark-mode header h1 {
-    position: relative;
-    font-size: 175%;
     border-bottom: 2px solid #ffffff; /* Adjust underline color for dark mode */
     color: #eee; /* Adjust text color for dark mode */
 }

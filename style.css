@@ -40,6 +40,9 @@ main {
 }
 
 .article {
+    display: flex; /* Set flexbox for layout */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Align items vertically centered */
     margin-bottom: 40px;
     background-color: #fff; /* Set card background color to white */
     border-radius: 8px;
@@ -55,10 +58,20 @@ main {
 
 .article h2 {
     color: #333; /* Set card title color to dark gray */
+    margin-bottom: 10px;
 }
 
 .article p {
     color: #666; /* Set card content color to light gray */
+}
+
+/* Image Styles */
+.article img {
+    max-width: 150px; /* Control the max width of the image */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-left: 20px; /* Add spacing between text and image */
 }
 
 /* Dark mode */
@@ -165,9 +178,18 @@ footer {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    max-width: 800px;
+    max-width: 800px; /* Limit the maximum width of the modal */
+    max-height: 90vh; /* Limit the maximum height of the modal */
+    overflow: auto; /* Ensure content is scrollable if it exceeds the modal */
     margin: 0 auto;
     animation: modal-open 0.5s ease-in-out forwards;
+}
+
+.modal img {
+    max-width: 50%; /* Ensure image does not exceed modal width */
+    max-height: 80vh; /* Ensure image does not exceed viewport height */
+    object-fit: contain; /* Scale image proportionally */
+    border-radius: 8px; /* Apply a border radius for consistency */
 }
 
 .modal-close {
@@ -191,7 +213,6 @@ footer {
     }
 }
 
-
 /* Ensures h1 inherits color from header */
 header h1 {
     border-bottom: 2px solid #000000;
@@ -206,4 +227,3 @@ header h1 {
     border-bottom: 2px solid #ffffff; /* Adjust underline color for dark mode */
     color: #eee; /* Adjust text color for dark mode */
 }
-

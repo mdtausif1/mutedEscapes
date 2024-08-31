@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
             content: "Immerse yourself in the timeless splendor of the Taj Mahal, a symbol of eternal love, nestled in the historic city of Agra, Uttar Pradesh. Lose yourself in the intricate marble architecture and stroll through the lush gardens surrounding this iconic monument." 
         },
         { 
-            title: "Chandrabhaga Beach: Konark-Puri Drive", 
+            title: "Chandrabhaga Beach: Marine Drive", 
             image: "https://upload.wikimedia.org/wikipedia/commons/a/a8/ChandrabhagaBeach.webp", 
             content: "Relax and rejuvenate on the golden sands of Chandrabhaga Beach before embarking on a picturesque drive along the Konark-Puri Marine Drive in Odisha. Feel the gentle breeze and listen to the soothing sound of crashing waves as you take in the scenic coastal views." 
         },

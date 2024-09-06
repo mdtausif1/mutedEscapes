@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #000000; /* Set default background color to dark gray */
     color: #fff; /* Set default text color to white */
-    transition: background-color 0.5s ease, color 0.5s ease; 
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 /* Light mode styles */
@@ -49,7 +49,7 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Add transition for background color */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .article:hover {
@@ -167,7 +167,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
     display: none;
     justify-content: center;
     align-items: center;
@@ -176,13 +176,29 @@ footer {
 
 .modal-content {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
+    color: #333; /* Dark text for readability */
+    padding: 30px; /* Add more padding for spacing */
+    border-radius: 10px;
     max-width: 800px; /* Limit the maximum width of the modal */
     max-height: 90vh; /* Limit the maximum height of the modal */
     overflow: auto; /* Ensure content is scrollable if it exceeds the modal */
     margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some shadow for a 3D effect */
     animation: modal-open 0.5s ease-in-out forwards;
+    text-align: justify; /* Makes text more readable */
+    line-height: 1.6; /* Improve line spacing */
+}
+
+.modal h2 {
+    margin-bottom: 20px;
+    color: #444; /* Slightly lighter text for titles */
+    font-size: 24px; /* Increase title size */
+}
+
+.modal p {
+    margin-bottom: 20px;
+    color: #555; /* Slightly darker color for paragraph text */
+    font-size: 16px; /* Increase font size for better readability */
 }
 
 .modal img {
@@ -190,6 +206,7 @@ footer {
     max-height: 80vh; /* Ensure image does not exceed viewport height */
     object-fit: contain; /* Scale image proportionally */
     border-radius: 8px; /* Apply a border radius for consistency */
+    margin-bottom: 20px; /* Add space below the image */
 }
 
 .modal-close {
@@ -197,9 +214,30 @@ footer {
     top: 10px;
     right: 10px;
     cursor: pointer;
-    color: #333;
+    color: #fff; /* Ensure close button is visible */
     font-size: 24px;
     font-weight: bold;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+/* Adjusting for dark mode */
+.dark-mode .modal-content {
+    background-color: #333; /* Dark background for modal in dark mode */
+    color: #eee; /* Light text for readability in dark mode */
+}
+
+.dark-mode .modal h2 {
+    color: #f5f5f5; /* Light color for the title in dark mode */
+}
+
+.dark-mode .modal p {
+    color: #ddd; /* Lighter paragraph text in dark mode */
+}
+
+.modal-close:hover {
+    color: #ccc; /* Lighter color for close button on hover */
 }
 
 @keyframes modal-open {
@@ -222,7 +260,7 @@ header h1 {
     color: inherit; /* Inherits color from header */
 }
 
-/* dark mode */
+/* Dark mode */
 .dark-mode header h1 {
     border-bottom: 2px solid #ffffff; /* Adjust underline color for dark mode */
     color: #eee; /* Adjust text color for dark mode */

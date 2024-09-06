@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000000; /* Set default background color to dark */
+    background-color: #000000; /* Set default background color to dark gray */
     color: #fff; /* Set default text color to white */
     transition: background-color 0.5s ease, color 0.5s ease;
 }
@@ -27,28 +27,23 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #fff; /* Set background color to white in light mode */
-    border-bottom: 2px solid #000; /* Border color for header in light mode */
+    border-bottom: none; /* Removed the underline in the header */
 }
 
 /* Dark mode header */
-.dark-mode header {
+body.dark-mode header {
     background-color: #000; /* Set background color to black in dark mode */
-    border-bottom: 2px solid #fff; /* Border color for header in dark mode */
 }
 
 header h1 {
-    margin: 0;
-    text-decoration: none;
-    color: inherit; /* Inherit color from the header background */
-    border-bottom: 2px solid #000; /* Consistent underline for light mode */
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 10px;
+    color: inherit; /* Inherits color from header */
 }
 
-/* Dark mode header h1 */
-.dark-mode header h1 {
-    border-bottom: 2px solid #ffffff; /* Adjust underline color for dark mode */
+/* Dark mode header text */
+body.dark-mode header h1 {
     color: #eee; /* Adjust text color for dark mode */
 }
 
@@ -58,9 +53,9 @@ main {
 }
 
 .article {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Set flexbox for layout */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Align items vertically centered */
     margin-bottom: 40px;
     background-color: #fff; /* Set card background color to white */
     border-radius: 8px;
@@ -85,32 +80,41 @@ main {
 
 /* Image Styles */
 .article img {
-    max-width: 150px;
+    max-width: 150px; /* Control the max width of the image */
     height: auto;
     object-fit: cover;
     border-radius: 8px;
-    margin-left: 20px;
+    margin-left: 20px; /* Add spacing between text and image */
 }
 
 /* Dark mode */
-.dark-mode .article {
+body.dark-mode .article {
     background-color: #333; /* Set card background color to darker gray in dark mode */
     color: #fff; /* Set text color to white in dark mode */
 }
 
-.dark-mode .article h2,
-.dark-mode .article p {
+body.dark-mode .article h2,
+body.dark-mode .article p {
     color: #ddd; /* Set card title and content color to light gray in dark mode */
 }
 
 /* Footer */
 footer {
-    background-color: #000000; /* Set footer background to black */
-    color: #ccc; /* Light gray text color for readability */
+    background-color: #fff; /* Matches header color in light mode */
+    color: #333; /* Dark text for contrast */
     padding: 40px 20px;
     text-align: center;
+    border-top: none; /* Removed the underline */
 }
 
+/* Footer in dark mode */
+body.dark-mode footer {
+    background-color: #000; /* Matches header color in dark mode */
+    color: #fff; /* Light text for contrast in dark mode */
+    border-top: none; /* Removed the underline in dark mode */
+}
+
+/* Footer Content */
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -133,8 +137,8 @@ footer {
 .footer-button {
     display: inline-flex;
     align-items: center;
-    background-color: #444; /* Darker background for buttons */
-    color: #fff; /* White text color */
+    background-color: #444;
+    color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 16px;
@@ -146,27 +150,27 @@ footer {
     width: 24px;
     height: 24px;
     margin-right: 8px;
-    fill: #fff;
+    fill: #fff; /* Ensure icon color is white */
 }
 
 .footer-button:hover {
-    background-color: #555; /* Lighter background on hover */
+    background-color: #555;
 }
 
 .footer-button.portfolio-button {
-    background-color: #007bff; /* Blue color for portfolio button */
+    background-color: #007bff;
 }
 
 .footer-button.portfolio-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
 .footer-button.resume-button {
-    background-color: #28a745; /* Green color for resume button */
+    background-color: #28a745;
 }
 
 .footer-button.resume-button:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #218838;
 }
 
 /* Social Icons */
@@ -178,14 +182,13 @@ footer {
 }
 
 .social-icons a {
-    display: inline-flex; /* Use inline-flex for proper alignment */
-    justify-content: center; /* Center icon horizontally */
-    align-items: center; /* Center icon vertically */
-    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Increase size for better visibility */
     height: 40px;
-    background-color: #333; /* Darker background for icons */
+    background-color: #444; /* Match background with footer */
     border-radius: 50%;
-    padding: 10px;
     transition: background-color 0.3s ease;
 }
 
@@ -197,7 +200,7 @@ footer {
 }
 
 .social-icons a:hover {
-    background-color: #555; /* Lighter background on hover */
+    background-color: #555;
 }
 
 .social-icons img:hover {
@@ -212,7 +215,12 @@ footer {
 .footer-bottom p {
     margin: 0;
     font-size: 14px;
-    color: #888; /* Lighter gray for bottom text */
+    color: #666; /* Gray text for footer content */
+}
+
+/* Footer Bottom in dark mode */
+body.dark-mode .footer-bottom p {
+    color: #aaa; /* Lighter gray text in dark mode */
 }
 
 /* Dark mode button */
@@ -223,7 +231,7 @@ footer {
     cursor: pointer;
 }
 
-.dark-mode .darkModeButton img {
+body.dark-mode .darkModeButton img {
     width: 25px;
     height: 25px;
     filter: invert(1);
@@ -234,17 +242,17 @@ footer {
     height: 25px;
 }
 
-.dark-mode .darkModeButton.dark-mode-button-active {
-    background-color: #555;
-    color: #fff;
+body.dark-mode .darkModeButton.dark-mode-button-active {
+    background-color: #555; /* Set button background color in dark mode */
+    color: #fff; /* Set button text color in dark mode */
     border-radius: 50%;
     padding: 5px;
     width: 40px;
     height: 40px;
 }
 
-.dark-mode .darkModeButton.dark-mode-button-active img {
-    filter: invert(1);
+body.dark-mode .darkModeButton.dark-mode-button-active img {
+    filter: invert(1); /* Invert icon color in dark mode */
 }
 
 /* Fullscreen modal styles */
@@ -254,7 +262,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
     display: none;
     justify-content: center;
     align-items: center;
@@ -262,8 +270,8 @@ footer {
 }
 
 .modal-content {
-    background-color: #fff;
-    color: #333;
+    background-color: #fff; /* Default background color for light mode */
+    color: #333; /* Default text color for light mode */
     padding: 30px;
     border-radius: 10px;
     max-width: 800px;
@@ -276,16 +284,33 @@ footer {
     line-height: 1.6;
 }
 
+/* Dark mode modal content */
+body.dark-mode .modal-content {
+    background-color: #333; /* Dark background for dark mode */
+    color: #eee; /* Light text for readability in dark mode */
+}
+
+/* Modal Header */
 .modal h2 {
     margin-bottom: 20px;
-    color: #444;
+    color: #444; /* Slightly lighter text for titles in light mode */
     font-size: 24px;
+}
+
+/* Dark mode modal header */
+body.dark-mode .modal h2 {
+    color: #f5f5f5; /* Light color for titles in dark mode */
 }
 
 .modal p {
     margin-bottom: 20px;
-    color: #555;
+    color: #555; /* Slightly darker color for paragraph text in light mode */
     font-size: 16px;
+}
+
+/* Dark mode modal paragraph */
+body.dark-mode .modal p {
+    color: #ddd; /* Lighter color for paragraph text in dark mode */
 }
 
 .modal img {
@@ -296,35 +321,32 @@ footer {
     margin-bottom: 20px;
 }
 
+/* Modal Close Button */
 .modal-close {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
-    color: #fff;
     font-size: 24px;
     font-weight: bold;
     background-color: transparent;
     border: none;
     outline: none;
+    color: #333; /* Default color for light mode */
 }
 
-/* Dark mode modal */
-.dark-mode .modal-content {
-    background-color: #333;
-    color: #eee;
-}
-
-.dark-mode .modal h2 {
-    color: #f5f5f5;
-}
-
-.dark-mode .modal p {
-    color: #ddd;
+/* Dark mode close button */
+body.dark-mode .modal-close {
+    color: #eee; /* Light color for dark mode */
 }
 
 .modal-close:hover {
-    color: #ccc;
+    color: #666; /* Slightly darker color on hover in light mode */
+}
+
+/* Dark mode close button hover */
+body.dark-mode .modal-close:hover {
+    color: #ccc; /* Slightly lighter color on hover in dark mode */
 }
 
 @keyframes modal-open {

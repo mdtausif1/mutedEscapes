@@ -6,6 +6,10 @@ body {
     background-color: #000000; /* Set default background color to dark gray */
     color: #fff; /* Set default text color to white */
     transition: background-color 0.5s ease, color 0.5s ease;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center items vertically */
+    min-height: 100vh; /* Full height */
 }
 
 /* Light mode styles */
@@ -50,8 +54,22 @@ body.dark-mode header h1 {
 /* Main Content */
 main {
     padding: 20px;
+    flex: 1; /* Take up available space */
 }
 
+/* Centering Contact Form */
+.contact-container {
+    background-color: #ffffff; /* Background for contact form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Set max width */
+    width: 100%; /* Full width */
+    margin: 20px auto; /* Center horizontally with margin */
+    text-align: center; /* Center text */
+}
+
+/* Article Styles */
 .article {
     display: flex; /* Set flexbox for layout */
     justify-content: space-between; /* Space between text and image */
@@ -104,7 +122,12 @@ footer {
     color: #333; /* Dark text for contrast */
     padding: 40px 20px;
     text-align: center;
-    border-top: none; /* Removed the underline */
+    width: 100%; /* Full width for the footer */
+}
+
+/* Remove margin below footer on contact page */
+body.contact-page footer {
+    margin-top: 0; /* No margin when on the contact page */
 }
 
 /* Footer in dark mode */
@@ -357,5 +380,125 @@ body.dark-mode .modal-close:hover {
     to {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+/* Global Box Sizing */
+* {
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+}
+
+/* Contact Form Styles */
+.contact-container {
+    background-color: #ffffff; /* Background for form in light mode */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px; /* Limit the width of the form */
+    width: 100%; /* Full width */
+    margin: 20px auto; /* Center the form */
+    transition: background-color 0.3s ease; /* Transition for background change */
+}
+
+/* Dark mode contact form */
+body.dark-mode .contact-container {
+    background-color: #444; /* Dark background for form in dark mode */
+    color: #eee; /* Light text color for contrast */
+}
+
+/* Form Header */
+.contact-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px; /* Title size */
+    color: #333; /* Dark title color */
+}
+
+/* Dark mode form header */
+body.dark-mode .contact-container h1 {
+    color: #fff; /* Light title color in dark mode */
+}
+
+/* Input Fields */
+.contact-container input,
+.contact-container textarea {
+    width: calc(100% - 22px); /* Full width minus padding for proper alignment */
+    padding: 10px;
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ccc; /* Light border for inputs */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s ease; /* Transition for border color */
+}
+
+/* Focus effect for input fields */
+.contact-container input:focus,
+.contact-container textarea:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Dark mode input fields */
+body.dark-mode .contact-container input,
+body.dark-mode .contact-container textarea {
+    background-color: #555; /* Dark background for inputs */
+    border: 1px solid #777; /* Darker border for contrast */
+    color: #fff; /* Light text color */
+}
+
+/* Submit Button */
+.contact-container button {
+    background-color: #007bff; /* Primary button color */
+    color: #fff; /* Text color */
+    padding: 10px 15px;
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Button text size */
+    transition: background-color 0.3s ease; /* Transition for button color */
+}
+
+/* Button hover effect */
+.contact-container button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+/* Dark mode button */
+body.dark-mode .contact-container button {
+    background-color: #28a745; /* Green button in dark mode */
+}
+
+body.dark-mode .contact-container button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Status message */
+#status {
+    margin-top: 10px;
+    font-size: 14px;
+    color: green; /* Default status color */
+}
+
+/* Dark mode status message */
+body.dark-mode #status {
+    color: #a8e6cf; /* Light color for status message in dark mode */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .contact-container {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .contact-container h1 {
+        font-size: 20px; /* Smaller title size */
+    }
+
+    .contact-container input,
+    .contact-container textarea {
+        font-size: 14px; /* Smaller font size for inputs */
+    }
+
+    .contact-container button {
+        font-size: 14px; /* Smaller font size for button */
     }
 }

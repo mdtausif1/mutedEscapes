@@ -8,7 +8,7 @@
 </head>
 <body class="dark-mode">
     <header>
-        <h1>mutedEscapes</h1>
+        <a href="index.html"><h1>mutedEscapes</h1></a>
         <button id="darkModeBtn" class="darkModeButton">
             <img src="assets/dark-mode.svg" alt="Dark Mode">
         </button>
@@ -29,7 +29,7 @@
                     <img src="assets/gmail.svg" alt="Gmail">
                 </a>
                 <a href="https://mdtausif1.github.io/resume-portfolio/" target="_blank">
-                    <img src="assets/portfolio-icon.svg" alt="portfolio">
+                    <img src="assets/portfolio-icon.svg" alt="Portfolio">
                 </a>
                 <a href="https://www.instagram.com/itsstausif" target="_blank">
                     <img src="assets/instagram.svg" alt="Instagram">
@@ -37,9 +37,21 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Md Tausif. All Rights Reserved.</p>
+                <button id="contactBtn" class="contact-button">Contact Me</button>
             </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "Lfzycgo59JwTt0azH",
+      });
+   })();
+</script>
 </body>
 </html>

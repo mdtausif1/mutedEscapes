@@ -103,3 +103,81 @@ blogPosts.forEach(post => {
     });
 });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Add event listener to load the contact form when the "Contact Us" button is clicked
+    const contactBtn = document.getElementById('contactBtn');
+    if (contactBtn) {
+        contactBtn.addEventListener('click', loadContactForm);
+    } else {
+        console.error('Contact button not found!');
+    }
+});
+
+// Function to load contact form dynamically
+function loadContactForm() {
+    fetch('contact.html') // Assuming contact.html is in the same directory
+        .then(response => response.text())
+        .then(data => {
+            const content = document.getElementById('content');
+            // Parse the HTML string from the response
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(data, 'text/html');
+            const contactForm = htmlDoc.querySelector('.contact-container');
+            
+            // Replace the main content with the contact form
+            content.innerHTML = '';
+            content.appendChild(contactForm);
+
+            // Initialize EmailJS after loading new content
+            emailjs.init("Lfzycgo59JwTt0azH");
+
+            // Add event listener to handle form submission
+            const form = document.getElementById("contactForm");
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();  // Prevent page reload on form submission
+
+                // Collect form data
+                var fromName = document.getElementById("name").value;
+                var fromEmail = document.getElementById("email").value;
+                var message = document.getElementById("message").value;
+
+                var params = {
+                    from_name: fromName,
+                    from_email: fromEmail,
+                    message: message,
+                    to_email: "mdtausifofficial@gmail.com"  // Admin email
+                };
+
+                // Display status message during sending
+                var status = document.getElementById("status");
+                status.innerHTML = "Sending...";
+
+                // Send email to Admin using EmailJS
+                emailjs.send("service_eoxtb4u", "template_oz24pur", params)
+                    .then(function(response) {
+                        console.log('Admin Email SUCCESS!', response.status, response.text);
+                        status.innerHTML = "Message sent successfully! You'll receive a response shortly.";
+                        
+                        // Prepare parameters for the user confirmation email
+                        var userParams = {
+                            to_name: fromName,          // Name of the user
+                            to_email: fromEmail,        // User's email
+                            from_name: "mutedEscapes", // Your brand or name
+                            message: "Thank you for reaching out! We'll get back to you soon."
+                        };
+
+                        // Send confirmation email to the user
+                        return emailjs.send("service_eoxtb4u", "template_xwujoco", userParams);
+                    })
+                    .then(function(response) {
+                        console.log('User Email SUCCESS!', response.status, response.text);
+                    })
+                    .catch(function(error) {
+                        console.log('FAILED...', error);
+                        status.innerHTML = "Failed to send message. Please try again.";
+                    });
+            });
+        })
+        .catch(error => console.error('Error loading contact form:', error));
+}
